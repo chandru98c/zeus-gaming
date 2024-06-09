@@ -308,7 +308,7 @@ li{
     grid-template-columns: repeat(auto-fit, minmax(125px, auto));
   }
   .t-games-container img{
-    max-height: 120px
+    max-height: 90px
   }
 }
 
