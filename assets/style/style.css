@@ -258,7 +258,7 @@ li{
 .trending-games {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #000;
+  
 }
 
 .tren-heading {
@@ -305,7 +305,7 @@ li{
 }
 @media (max-width:480px) {
   .t-games-container{
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(125px, auto));
   }
   .t-games-container img{
     max-height: 120px
