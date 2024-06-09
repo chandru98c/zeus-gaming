@@ -711,6 +711,9 @@ footer {
     gap: 40px;
     padding: 40px;
   }
+  .nav-bar{
+     width: 92%;
+  }
 }
 @media (max-width: 510px) {
   .playstore-appstore {
