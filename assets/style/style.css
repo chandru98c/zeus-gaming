@@ -149,13 +149,14 @@ li {
     border-radius: 0 0 30px 30px;
     text-align: left;
     background: rgb(225, 225, 225);
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.352), 0 5px 20px rgba(0, 0, 0, 0.297);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.352),
+      0 5px 20px rgba(0, 0, 0, 0.297);
   }
 
   .nav-list li {
     padding: 20px;
   }
-  .nav-list a{
+  .nav-list a {
     color: #000;
     font-size: 18px;
   }
@@ -164,9 +165,8 @@ li {
   }
   #profile-li {
     display: initial;
-    
   }
-  .nav-list a:hover{
+  .nav-list a:hover {
     color: gray;
   }
   #close {
@@ -185,7 +185,6 @@ li {
     vertical-align: middle;
     padding: 0 5px 0 0;
   }
- 
 }
 
 /*--------------------------------------------------------------------------------------------- hero section */
@@ -272,29 +271,32 @@ li {
 .most-played-games {
   padding-top: 50px;
   padding-bottom: 70px;
-  
 }
 
-.t-c-heading,.m-heading {
+.t-c-heading,
+.m-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 40px;
 }
-.t-c-heading h3,.m-heading h3{
+.t-c-heading h3,
+.m-heading h3 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
 
   font-size: 25px;
 }
-.t-c-heading p,.m-heading p {
+.t-c-heading p,
+.m-heading p {
   font-family: "Varela Round", sans-serif;
   font-weight: 800;
   color: gray;
   padding-top: 7px;
   font-size: 14px;
 }
-.t-c-heading a,.m-heading a {
+.t-c-heading a,
+.m-heading a {
   border-radius: 25px;
   padding: 10px 15px;
   color: white;
@@ -305,39 +307,47 @@ li {
   transition: 0.5s all;
   background-color: black;
 }
-.t-c-heading a:hover,.m-heading a:hover {
+.t-c-heading a:hover,
+.m-heading a:hover {
   background-color: white;
   color: black;
 
   border: 2px solid black;
 }
-.t-games-container,.m-games {
+.t-games-container,
+.m-games {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 30px;
   row-gap: 40px;
 }
 @media (max-width: 480px) {
-  .t-games-container,.m-games {
+  .t-games-container,
+  .m-games {
     grid-template-columns: repeat(auto-fit, minmax(125px, auto));
   }
-  .t-games-container img,.m-games img {
+  .t-games-container img,
+  .m-games img {
     max-width: 150px !important;
   }
-  .t-games-container div,.m-games div{
+  .t-games-container div,
+  .m-games div {
     height: 220px;
   }
-  .t-games-container h3,.m-games h3 {
+  .t-games-container h3,
+  .m-games h3 {
     position: absolute;
     bottom: 50px;
   }
-  .t-games-container p,.m-games p {
+  .t-games-container p,
+  .m-games p {
     position: absolute;
     bottom: 30px;
   }
 }
 
-.t-games-container div,.m-games div {
+.t-games-container div,
+.m-games div {
   padding: 0px 20px 20px 20px;
   cursor: pointer;
   display: flex;
@@ -347,7 +357,8 @@ li {
   position: relative;
   border-radius: 20px;
 }
-.t-games-container h3,.m-games h3 {
+.t-games-container h3,
+.m-games h3 {
   padding-top: 20px;
   font-family: "Varela Round", sans-serif;
   font-optical-sizing: auto;
@@ -355,14 +366,16 @@ li {
   text-align: center;
 }
 
-.t-games-container p,.m-games p{
+.t-games-container p,
+.m-games p {
   font-family: "Instrument Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
   text-align: center;
   padding-top: 7px;
 }
-.t-games-container img,.m-games img  {
+.t-games-container img,
+.m-games img {
   max-height: 200px;
   margin-top: -50px;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.897));
@@ -377,14 +390,18 @@ li {
   opacity: 0;
   color: white;
   transition: all 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.603);
-  box-shadow: 0 0 10px rgba(8, 8, 8, 0.769);
+  /* background-color: rgba(0, 0, 0, 0.603); */
+  backdrop-filter: blur(30px) ;
+  box-shadow: 0 2px 5px rgba(8, 8, 8, 0.249);
   border-radius: 25px;
   padding: 8px 15px;
 }
 .t-games-container div:nth-child(1) {
-  background-color: #3972f5;
-  box-shadow: inset 0 0 10px #004af6, 0px 0px 5px #003cc6;
+  /* background-color: #5581D9; */
+  background: linear-gradient(to left bottom, #71a0ff 0%, #1a57d0 100%);
+  /* background: linear-gradient(to right bottom, red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
+  box-shadow: 
+  /* inset 0 0 10px #004af6, */ 0px 4px 10px #1a57d07d;
 }
 .t-games-container div:nth-child(1) h3 {
   color: white;
@@ -395,8 +412,10 @@ li {
   text-shadow: 0 0 2px #011058;
 }
 .t-games-container div:nth-child(2) {
-  background-color: #ec1c1c;
-  box-shadow: inset 0 0 10px #ff0000, 0px 0px 5px #af0000;
+  /* background-color: #ec1c1c; */
+  background: linear-gradient(to left bottom, #ff4e4e 0%, #ff0000 100%);
+  box-shadow: 
+  /* inset 0 0 10px #ff0000, */ 0px 3px 10px #ff00007d;
 }
 .t-games-container div:nth-child(2) h3 {
   color: white;
@@ -407,8 +426,8 @@ li {
   text-shadow: 0 0 2px #650e0e;
 }
 .t-games-container div:nth-child(3) {
-  background-color: rgb(161, 31, 31);
-  box-shadow: inset 0 0 10px rgb(201, 0, 0), 0px 0px 5px rgb(125, 26, 26);
+  background: linear-gradient(to left bottom,  #9b402b 0%, #59281D 100%);
+  box-shadow:  0px 3px 10px #59281D7d;
 }
 .t-games-container div:nth-child(3) h3 {
   color: #ffffff;
@@ -419,20 +438,20 @@ li {
   text-shadow: 0 0 2px #650e0e;
 }
 .t-games-container div:nth-child(4) {
-  background-color: rgb(245, 245, 36);
-  box-shadow: inset 0 0 10px rgb(255, 255, 1), 0px 0px 5px rgb(165, 165, 48);
+  background: linear-gradient(to left bottom, #F2C029 0%, #D98723 100%);
+  box-shadow:  0px 3px 10px #D987237d;
 }
 .t-games-container div:nth-child(4) h3 {
-  color: rgb(0, 0, 0);
+  color: white;
   text-shadow: 0 0 2px rgb(90, 90, 14);
 }
 .t-games-container div:nth-child(4) p {
-  color: rgb(0, 0, 0);
+  color: white;
   text-shadow: 0 0 2px rgb(165, 165, 48);
 }
 .t-games-container div:nth-child(5) {
-  background-color: rgb(223, 0, 0);
-  box-shadow: inset 0 0 10px rgb(255, 75, 75), 0px 0px 5px rgb(133, 39, 39);
+  background: linear-gradient(to left bottom, #ff4b4b 0%, #ff0000 100%);
+  box-shadow:  0px 3px 10px  #ff00007d;
 }
 .t-games-container div:nth-child(5) h3 {
   color: #ffffff;
@@ -443,8 +462,8 @@ li {
   text-shadow: 0 0 2px #6c0b0b;
 }
 .t-games-container div:nth-child(6) {
-  background-color: #043ab9;
-  box-shadow: inset 0 0 10px #004af6, 0px 0px 5px #004af6;
+  background: linear-gradient(to left bottom, #d4300b 0%, #8C2C16 100%);
+  box-shadow:  0px 3px 10px #8C2C167d;
 }
 .t-games-container div:nth-child(6) h3 {
   color: rgb(255, 255, 255);
@@ -454,19 +473,21 @@ li {
   color: #ffffff;
   text-shadow: 0 0 2px #010727;
 }
-.t-games-container div:nth-child(7), .m-games div:nth-child(7) {
-  background-color: rgb(233, 233, 233);
-  box-shadow: inset 0 0 5px rgb(239, 239, 239), 0px 0px 5px rgb(151, 151, 151);
+.t-games-container div:nth-child(7),
+.m-games div:nth-child(7) {
+  background: linear-gradient(to left bottom, #ffffff 0%, #dbdbdb 100%);
+  box-shadow:  0px 4px 10px rgba(123, 123, 123, 0.626);
   justify-content: center;
   align-items: center;
   font-family: "Ubuntu", sans-serif;
   font-size: 25px;
   gap: 20px;
   font-weight: 600;
-  text-shadow: 0 0 3px rgb(63, 63, 63);
+  text-shadow: 0 0 2px rgba(63, 63, 63, 0.466);
   padding: 30px 0;
 }
-.t-games-container div:nth-child(7) i,.m-games div:nth-child(7) i {
+.t-games-container div:nth-child(7) i,
+.m-games div:nth-child(7) i {
   padding: 10px;
   background-color: black;
   border-radius: 25px;
@@ -475,13 +496,16 @@ li {
   transition: 0.3s all;
   color: white;
 }
-.t-games-container div:nth-child(7):hover i,.m-games div:nth-child(7):hover i  {
+.t-games-container div:nth-child(7):hover i,
+.m-games div:nth-child(7):hover i {
   transform: scale(1.2);
 }
-.t-games-container div:hover .p-hover,.m-games div:hover .p-hover  {
+.t-games-container div:hover .p-hover,
+.m-games div:hover .p-hover {
   opacity: 1;
 }
-.t-games-container div:hover img,.m-games div:hover img {
+.t-games-container div:hover img,
+.m-games div:hover img {
   transform: scale(1.1);
 }
 
@@ -491,8 +515,8 @@ li {
 }
 
 .m-games div:nth-child(1) {
-  background-color: #114e00;
-  box-shadow: inset 0 0 10px #0b3200, 0px 0px 5px #114e00;
+  background: linear-gradient(to left bottom, #F2921D 0%, #D94814 100%);
+  box-shadow:  0px 3px 10px #5407007d;
 }
 .m-games div:nth-child(1) h3 {
   color: white;
@@ -503,8 +527,8 @@ li {
   text-shadow: 0 0 2px #011058;
 }
 .m-games div:nth-child(2) {
-  background-color: rgb(24, 24, 24);
-  box-shadow: inset 0 0 10px rgb(47, 47, 47), 0px 0px 5px rgb(0, 0, 0);
+  background: linear-gradient(to left bottom, #3B3F40  0%, #0D0D0D 100%);
+  box-shadow:  0px 3px 10px #0D0D0D7d;
 }
 .m-games div:nth-child(2) h3 {
   color: white;
@@ -515,8 +539,8 @@ li {
   text-shadow: 0 0 2px rgb(0, 0, 0);
 }
 .m-games div:nth-child(3) {
-  background-color: rgb(161, 31, 31);
-  box-shadow: inset 0 0 10px rgb(201, 0, 0), 0px 0px 5px rgb(125, 26, 26);
+  background: linear-gradient(to left bottom, #F28A2E 0%, #8C3211 100%);
+  box-shadow:  0px 3px 10px #8C32117d;
 }
 .m-games div:nth-child(3) h3 {
   color: #ffffff;
@@ -527,8 +551,8 @@ li {
   text-shadow: 0 0 2px #650e0e;
 }
 .m-games div:nth-child(4) {
-  background-color: rgb(255, 145, 0);
-  box-shadow: inset 0 0 10px rgb(255, 152, 18), 0px 0px 5px rgb(197, 111, 0);
+  background: linear-gradient(to left bottom, #c76f22 0%, #7d3b22 100%);
+  box-shadow:  0px 3px 10px #a34d2e7d;
 }
 .m-games div:nth-child(4) h3 {
   color: rgb(255, 255, 255);
@@ -539,8 +563,8 @@ li {
   text-shadow: 0 0 2px rgb(167, 167, 0);
 }
 .m-games div:nth-child(5) {
-  background-color: rgb(24, 24, 24);
-  box-shadow: inset 0 0 10px rgb(47, 47, 47), 0px 0px 5px rgb(0, 0, 0);
+  background: linear-gradient(to left bottom, #736855 0%, #261A20 100%);
+  box-shadow:  0px 3px 10px #261A207d;
 }
 .m-games div:nth-child(5) h3 {
   color: #ffffff;
@@ -551,8 +575,8 @@ li {
   text-shadow: 0 0 2px #6c0b0b;
 }
 .m-games div:nth-child(6) {
-  background-color: #452d00;
-  box-shadow: inset 0 0 10px #452d00, 0px 0px 5px #0b0700;
+  background: linear-gradient(to left bottom, #F29F05 0%, #BF5B04 100%);
+  box-shadow:  0px 3px 10px #BF5B047d;
 }
 .m-games div:nth-child(6) h3 {
   color: rgb(255, 255, 255);
