@@ -349,8 +349,9 @@ li {
     position: absolute;
     bottom: 20px;
   }
-  .t-c-heading h3,.m-heading h3{
-font-size: 27px;
+  .t-c-heading h3,
+  .m-heading h3 {
+    font-size: 27px;
   }
 }
 
@@ -598,14 +599,86 @@ font-size: 27px;
 }
 /* --------------------------------------------------------------------------------------------- catagories */
 .c-games {
-
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.c-games-first,
+.c-games-second,
+.c-games-third,
+.c-games-forth {
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-games a {
+  position: absolute;
+  font-size: 18px;
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  padding: 3px 15px;
+  transition: 0.5s all;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+  top: 10px;
+  left: 10px;
+  border: 1px solid white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.53);
+}
+.c-games div:hover a{
+ background-color: transparent;
+  backdrop-filter: blur(15px);
+  color: white;
+  border: 1px solid white;
 }
 
-.c-games  img{
- 
-}
 
+.c-games img {
+  width: 100%;
+  transition: 0.5s all;
+  border-radius: 30px;
+}
+.c-games-first {
+  background-image: linear-gradient(to right bottom,
+    rgb(0, 0, 0), 
+    rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0) 100%
+  ), url(/assets/images/categories/action-change.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.c-games-second {
+  background-image: linear-gradient(to right bottom,
+  rgb(0, 0, 0), 
+  rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0) 100%
+),  url(/assets/images/categories/coc-change.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.c-games-third {
+  background-image: linear-gradient(to right bottom,
+  rgb(0, 0, 0), 
+  rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0) 100%
+),  url(/assets/images/categories/race-change.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.c-games-forth {
+  background-image: linear-gradient(to right bottom,
+  rgb(0, 0, 0), 
+  rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0) 100%
+),  url(/assets/images/categories/arcade-change.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.c-games div:hover img {
+  opacity: 0;
+}
 
 /* ---------------------------------------------------------------------------------------------footer */
 footer {
