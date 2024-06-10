@@ -193,7 +193,7 @@ li {
 /*--------------------------------------------------------------------------------------------- hero section */
 
 .home {
-  background-image: url(/assets/images/Screenshot\ 2024-06-08\ 153415.png);
+  background-image: url(/assets/images/home-bg.png);
   background-position: center;
   background-size: cover;
   height: 580px;
@@ -351,7 +351,7 @@ li {
   }
   .t-c-heading h3,
   .m-heading h3 {
-    font-size: 27px;
+    font-size: 25px;
   }
 }
 
@@ -901,7 +901,7 @@ footer {
     background-position: center;
     background-size: cover;
     height: 580px;
-    background-image: url(/assets/images/Screenshot\ 2024-06-08\ 153523.png);
+    background-image: url(/assets/images/home-m-bg.png);
     justify-content: start;
   }
   .home h2 {
