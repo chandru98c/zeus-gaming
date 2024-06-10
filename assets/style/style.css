@@ -272,7 +272,7 @@ li {
 /* -------------------------------------------------------------------------------------------tranding games */
 .trending-games,
 .most-played-games,
-.categories-container,.see-the-latest,.all-games {
+.categories-container,.see-the-latest,.news,.all-games {
   padding-top: 50px;
   padding-bottom: 70px;
 }
@@ -561,6 +561,58 @@ filter: drop-shadow( 0 3px 7px rgba(0, 0, 0, 0.357));
 
 }
 /* ---------------------------------------------------------------------------------------------news */
+.news{
+  text-align: center;
+}
+#news-h2 {
+  font-size: 25px;
+  padding: 0px 0 40px 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, auto));
+  column-gap: 60px;
+  row-gap: 50px;
+  text-align: center;
+}
+@media (max-width: 400px) {
+  .news-container{
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+}
+.news-container div:hover {
+  transform: scale(1.05);
+}
+.news-container div {
+  background-color: #f6f6f6;
+  padding-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.226);
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.news-container h4 {
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  padding-top: 18px;
+}
+.news-container p {
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  padding-top: 3px;
+  color: rgb(97, 97, 97);
+}
+
+.news-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 
 
 /* ---------------------------------------------------------------------------------------------footer */
