@@ -97,20 +97,20 @@ li {
 .nav-list a {
   padding: 0 20px;
   color: grey;
-  transition: 0.3s all;
+  transition: 0.5s all;
 }
 .nav-list a:hover {
   color: #fff;
 }
 #close {
   padding: 20px 0 10px 20px;
-  font-size: 20px;
-  color: var(--dark--color--);
+  font-size: 25px;
+  color: black;
   display: none;
   transition: 0.3s all;
 }
 #close:hover {
-  color: var(--main--color--);
+  color: gray;
 }
 #search-icon i {
   vertical-align: middle;
@@ -146,18 +146,28 @@ li {
     transition: 0.5s all;
     top: -10000%;
     padding: 15px;
+    border-radius: 0 0 30px 30px;
     text-align: left;
-    background: var(--light--color--);
+    background: rgb(225, 225, 225);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.352), 0 5px 20px rgba(0, 0, 0, 0.297);
   }
 
   .nav-list li {
     padding: 20px;
   }
+  .nav-list a{
+    color: #000;
+    font-size: 18px;
+  }
   .nav-list.open {
-    top: 10px;
+    top: -15px;
   }
   #profile-li {
     display: initial;
+    
+  }
+  .nav-list a:hover{
+    color: gray;
   }
   #close {
     display: initial;
@@ -192,15 +202,17 @@ li {
   text-align: center;
 }
 .home h2 {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+
   font-size: 40px;
   padding-top: 90px;
   line-height: 1;
 }
 .home p {
-  font-family: "Courier Prime", monospace;
+  font-family: "Varela Round", sans-serif;
   color: gray;
-  padding: 25px 0 15px 0;
+  padding: 35px 0 23px 0;
 }
 #home-btn {
   outline: none;
@@ -260,28 +272,29 @@ li {
 .most-played-games {
   padding-top: 50px;
   padding-bottom: 70px;
+  
 }
 
-.t-c-heading {
+.t-c-heading,.m-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 40px;
 }
-.t-c-heading h3 {
+.t-c-heading h3,.m-heading h3{
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
 
   font-size: 25px;
 }
-.t-c-heading p {
+.t-c-heading p,.m-heading p {
   font-family: "Varela Round", sans-serif;
   font-weight: 800;
   color: gray;
   padding-top: 7px;
   font-size: 14px;
 }
-.t-c-heading a {
+.t-c-heading a,.m-heading a {
   border-radius: 25px;
   padding: 10px 15px;
   color: white;
@@ -292,39 +305,39 @@ li {
   transition: 0.5s all;
   background-color: black;
 }
-.t-c-heading a:hover {
+.t-c-heading a:hover,.m-heading a:hover {
   background-color: white;
   color: black;
 
   border: 2px solid black;
 }
-.t-games-container {
+.t-games-container,.m-games {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 30px;
   row-gap: 40px;
 }
 @media (max-width: 480px) {
-  .t-games-container {
+  .t-games-container,.m-games {
     grid-template-columns: repeat(auto-fit, minmax(125px, auto));
   }
-  .t-games-container img {
+  .t-games-container img,.m-games img {
     max-width: 150px !important;
   }
-  .t-games-container div {
+  .t-games-container div,.m-games div{
     height: 220px;
   }
-  .t-games-container h3 {
+  .t-games-container h3,.m-games h3 {
     position: absolute;
     bottom: 50px;
   }
-  .t-games-container p {
+  .t-games-container p,.m-games p {
     position: absolute;
     bottom: 30px;
   }
 }
 
-.t-games-container div {
+.t-games-container div,.m-games div {
   padding: 0px 20px 20px 20px;
   cursor: pointer;
   display: flex;
@@ -334,7 +347,7 @@ li {
   position: relative;
   border-radius: 20px;
 }
-.t-games-container h3 {
+.t-games-container h3,.m-games h3 {
   padding-top: 20px;
   font-family: "Varela Round", sans-serif;
   font-optical-sizing: auto;
@@ -342,12 +355,18 @@ li {
   text-align: center;
 }
 
-.t-games-container p {
+.t-games-container p,.m-games p{
   font-family: "Instrument Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
   text-align: center;
   padding-top: 7px;
+}
+.t-games-container img,.m-games img  {
+  max-height: 200px;
+  margin-top: -50px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.897));
+  transition: 0.5s all;
 }
 .p-hover {
   position: absolute;
@@ -365,7 +384,7 @@ li {
 }
 .t-games-container div:nth-child(1) {
   background-color: #3972f5;
-  box-shadow: inset 0 0 10px #004af6, 0px 0px 5px #004af6;
+  box-shadow: inset 0 0 10px #004af6, 0px 0px 5px #003cc6;
 }
 .t-games-container div:nth-child(1) h3 {
   color: white;
@@ -377,7 +396,7 @@ li {
 }
 .t-games-container div:nth-child(2) {
   background-color: #ec1c1c;
-  box-shadow: inset 0 0 10px #f22626, 0px 0px 5px #650e0e;
+  box-shadow: inset 0 0 10px #ff0000, 0px 0px 5px #af0000;
 }
 .t-games-container div:nth-child(2) h3 {
   color: white;
@@ -389,7 +408,7 @@ li {
 }
 .t-games-container div:nth-child(3) {
   background-color: rgb(161, 31, 31);
-  box-shadow: inset 0 0 10px rgb(224, 52, 52), 0px 0px 5px rgb(125, 26, 26);
+  box-shadow: inset 0 0 10px rgb(201, 0, 0), 0px 0px 5px rgb(125, 26, 26);
 }
 .t-games-container div:nth-child(3) h3 {
   color: #ffffff;
@@ -401,7 +420,7 @@ li {
 }
 .t-games-container div:nth-child(4) {
   background-color: rgb(245, 245, 36);
-  box-shadow: inset 0 0 10px rgb(255, 255, 76), 0px 0px 5px rgb(165, 165, 48);
+  box-shadow: inset 0 0 10px rgb(255, 255, 1), 0px 0px 5px rgb(165, 165, 48);
 }
 .t-games-container div:nth-child(4) h3 {
   color: rgb(0, 0, 0);
@@ -424,7 +443,7 @@ li {
   text-shadow: 0 0 2px #6c0b0b;
 }
 .t-games-container div:nth-child(6) {
-  background-color: #072d88;
+  background-color: #043ab9;
   box-shadow: inset 0 0 10px #004af6, 0px 0px 5px #004af6;
 }
 .t-games-container div:nth-child(6) h3 {
@@ -435,7 +454,7 @@ li {
   color: #ffffff;
   text-shadow: 0 0 2px #010727;
 }
-.t-games-container div:nth-child(7) {
+.t-games-container div:nth-child(7), .m-games div:nth-child(7) {
   background-color: rgb(233, 233, 233);
   box-shadow: inset 0 0 5px rgb(239, 239, 239), 0px 0px 5px rgb(151, 151, 151);
   justify-content: center;
@@ -447,7 +466,7 @@ li {
   text-shadow: 0 0 3px rgb(63, 63, 63);
   padding: 30px 0;
 }
-.t-games-container div:nth-child(7) i {
+.t-games-container div:nth-child(7) i,.m-games div:nth-child(7) i {
   padding: 10px;
   background-color: black;
   border-radius: 25px;
@@ -456,65 +475,94 @@ li {
   transition: 0.3s all;
   color: white;
 }
-.t-games-container div:nth-child(7):hover i {
+.t-games-container div:nth-child(7):hover i,.m-games div:nth-child(7):hover i  {
   transform: scale(1.2);
 }
-.t-games-container div:hover .p-hover {
+.t-games-container div:hover .p-hover,.m-games div:hover .p-hover  {
   opacity: 1;
 }
-.t-games-container div:hover img {
+.t-games-container div:hover img,.m-games div:hover img {
   transform: scale(1.1);
 }
-.t-games-container img {
-  max-height: 200px;
-  margin-top: -50px;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.897));
-  transition: 0.5s all;
-}
+
 /* ---------------------------------------------------------------------------------------------most played */
 .most-played-games {
-  background-color: black;
-}
-.m-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 40px;
-}
-.m-heading h3 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  color: white;
-  font-size: 25px;
-}
-.m-heading p {
-  font-family: "Varela Round", sans-serif;
-  font-weight: 800;
-  color: gray;
-  padding-top: 7px;
-  font-size: 14px;
-}
-.m-heading a {
-  border-radius: 25px;
-  padding: 10px 15px;
-  color: black;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  border: 2px solid rgb(255, 255, 255);
-  text-shadow: 0 0 5px gray;
-  transition: 0.5s all;
-  background-color: white;
-}
-.m-heading a:hover {
-  background-color: black;
-  color: white;
-
-  border: 2px solid white;
+  background-color: rgb(245, 245, 245);
 }
 
-.m-games-container {
-  background-color: gray;
+.m-games div:nth-child(1) {
+  background-color: #114e00;
+  box-shadow: inset 0 0 10px #0b3200, 0px 0px 5px #114e00;
 }
+.m-games div:nth-child(1) h3 {
+  color: white;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.612);
+}
+.m-games div:nth-child(1) p {
+  color: #ffffff;
+  text-shadow: 0 0 2px #011058;
+}
+.m-games div:nth-child(2) {
+  background-color: rgb(24, 24, 24);
+  box-shadow: inset 0 0 10px rgb(47, 47, 47), 0px 0px 5px rgb(0, 0, 0);
+}
+.m-games div:nth-child(2) h3 {
+  color: white;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+.m-games div:nth-child(2) p {
+  color: #ffffff;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+.m-games div:nth-child(3) {
+  background-color: rgb(161, 31, 31);
+  box-shadow: inset 0 0 10px rgb(201, 0, 0), 0px 0px 5px rgb(125, 26, 26);
+}
+.m-games div:nth-child(3) h3 {
+  color: #ffffff;
+  text-shadow: 0 0 2px #300000;
+}
+.m-games div:nth-child(3) p {
+  color: #ffffff;
+  text-shadow: 0 0 2px #650e0e;
+}
+.m-games div:nth-child(4) {
+  background-color: rgb(255, 145, 0);
+  box-shadow: inset 0 0 10px rgb(255, 152, 18), 0px 0px 5px rgb(197, 111, 0);
+}
+.m-games div:nth-child(4) h3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 2px rgb(90, 90, 14);
+}
+.m-games div:nth-child(4) p {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 2px rgb(167, 167, 0);
+}
+.m-games div:nth-child(5) {
+  background-color: rgb(24, 24, 24);
+  box-shadow: inset 0 0 10px rgb(47, 47, 47), 0px 0px 5px rgb(0, 0, 0);
+}
+.m-games div:nth-child(5) h3 {
+  color: #ffffff;
+  text-shadow: 0 0 2px #4b0b0b;
+}
+.m-games div:nth-child(5) p {
+  color: #ffffff;
+  text-shadow: 0 0 2px #6c0b0b;
+}
+.m-games div:nth-child(6) {
+  background-color: #452d00;
+  box-shadow: inset 0 0 10px #452d00, 0px 0px 5px #0b0700;
+}
+.m-games div:nth-child(6) h3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 2px #010224;
+}
+.m-games div:nth-child(6) p {
+  color: #ffffff;
+  text-shadow: 0 0 2px #010727;
+}
+
 /* ---------------------------------------------------------------------------------------------footer */
 footer {
   background-color: #000;
