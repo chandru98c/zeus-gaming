@@ -10,6 +10,7 @@
   -webkit-user-select: none;
   outline: none;
 }
+
 :root {
   --main--color--: #a80000;
   --secondary--color--: #731010;
@@ -272,7 +273,7 @@ li {
 /* -------------------------------------------------------------------------------------------tranding games */
 .trending-games,
 .most-played-games,
-.categories-container,.see-the-latest,.news,.all-games {
+.categories-container,.latest-container,.news,.all-games,.products {
   padding-top: 50px;
   padding-bottom: 70px;
 }
@@ -419,13 +420,13 @@ li {
 }
 
 /* ---------------------------------------------------------------------------------------------most played */
-.most-played-games {
+.most-played-games,.products {
   background-color: #f6f6f6;
 }
 
 
 /* --------------------------------------------------------------------------------------------- catagories */
-.c-games {
+.c-games,.products-contanier {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   justify-content: center;
@@ -433,7 +434,7 @@ li {
   gap: 30px;
 }
 @media (max-width:350px) {
-  .c-games{
+  .c-games,.products-contanier{
     grid-template-columns: repeat(1,1fr);
   }
 }
@@ -471,7 +472,7 @@ li {
 }
 
 
-.c-games img {
+.c-games img,.products-contanier img {
   width: 100%;
   transition: 0.5s all;
   border-radius: 30px;
@@ -512,13 +513,16 @@ li {
   opacity: 0;
 }
 /* ----------------------------------------------------------------------------------------------latest */
-.see-the-latest{
+.latest-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.226) 0%, rgba(0, 0, 0, 0.217) 100%), url(/assets/images/studio-pinata-main-002.jpg);
+  
 background-position: center;
 background-size: cover;
+}
+.see-the-latest{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.226) 0%, rgba(0, 0, 0, 0.217) 100%), url(/assets/images/studio-pinata-main-002.jpg);
 }
 .latest-content{
   display: flex;
@@ -855,7 +859,7 @@ footer {
   .nav-bar {
     width: 92%;
   }
-  .see-the-latest{
+  .latest-container{
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -1033,4 +1037,100 @@ footer {
 .superman p {
   color: #ffffff;
   text-shadow: 0 0 2px #010727;
+}
+/* ------------------------------------------------------------------------------------------------ products */
+.p-one,.p-two,.p-three,.p-four{
+position: relative;
+border-radius: 30px;
+display: flex;
+flex-direction: column;
+padding: 2px;
+color: white;
+transition: .4s all;
+}
+.products-contanier img{
+  border-radius: 30px 30px 0 0 !important;
+ 
+}
+
+
+.p-one {
+  background: linear-gradient(to left bottom, #BDE3F2 0%, #324E59 100%);
+  box-shadow: 0px 3px 10px #324E597d;
+}
+.p-two {
+  background: linear-gradient(to left bottom, #89e6fa 0%, #3279A6 100%);
+  box-shadow: 0px 3px 10px #3279A67d;
+}
+.p-three {
+  background: linear-gradient(to left bottom, #e6e6e6 0%, #616F8C 100%);
+  box-shadow: 0px 3px 10px #616F8C7d;
+}
+.p-four {
+  background: linear-gradient(to left bottom, #929CA6 0%, #3D4F73 100%);
+  box-shadow: 0px 3px 10px #3D4F737d;
+}
+.p-one h4,.p-two h4,.p-three h4,.p-four h4{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px 0 0 10px;
+  color: white;
+}
+.p-one p,.p-two p,.p-three p,.p-four p{
+  font-family: "Varela Round", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 0 35px 25px;
+  color: white;
+}
+
+.p-content{
+  backdrop-filter: blur(15px) brightness(67%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0 15px 15px;
+
+  
+}.p-content i{
+  vertical-align: middle;
+  
+}.p-content a{
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+#p-open{
+  
+  background-color: #00000081;
+  border-radius: 20px;
+  padding: 5px 20px;
+  transition: .35s all;
+}
+#p-open:hover {
+  transform: scale(1.2);
+}
+#p-downloads{
+  backdrop-filter: blur(15px) brightness(50%);
+  box-shadow: 0 2px 5px #0000007d;
+  bottom: 170px ;
+  left: 15px;
+  border-radius: 20px;
+  padding: 8px 20px;
+  transition: .35s all;
+  opacity: 0;
+  position: absolute;
+  transition: .5s all;
+}
+.products-contanier div:hover #p-downloads{
+ opacity: 1;
+}
+
+/* ------------------------------------------------------------------------------------------- games latest contect */
+.games-latest-container{
+background-image: url(/assets/images/uncharted.png);
 }
