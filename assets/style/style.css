@@ -448,8 +448,13 @@ li {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  
+
 }
-@media (max-width: 350px) {
+.c-games div{
+  cursor: pointer;
+}
+@media (max-width: 400px) {
   .c-games,
   .products-contanier,
   .tg-container {
@@ -554,6 +559,10 @@ li {
 
   background-position: center;
   background-size: cover;
+  
+}
+.latest-container i{
+  cursor: pointer;
 }
 .see-the-latest {
   background-image: linear-gradient(
@@ -1171,6 +1180,24 @@ footer {
   opacity: 1;
 }
 
+/* ---------------------------------------------------------------------------------------- rewards */
+.rewards-container div{
+background-position: center;
+background-size: cover;
+}
+.reward-one{
+  background-image: linear-gradient( to bottom,rgba(0, 0, 0, 0.386),rgba(0, 0, 0, 0.605)), url(/assets/images/r-one.jpg);
+}
+.reward-two{
+  background-image: linear-gradient( to bottom,rgba(0, 0, 0, 0.386),rgba(0, 0, 0, 0.605)), url(/assets/images/r-two.jpg);
+}
+.reward-three{
+  background-image: linear-gradient( to bottom,rgba(0, 0, 0, 0.386),rgba(0, 0, 0, 0.605)), url(/assets/images/r-three.jpg);
+}
+.rewards-container img{
+  width: 70px !important;
+  filter: drop-shadow(0px 0px 15px white) !important;
+}
 /* ------------------------------------------------------------------------------------------- games latest contect */
 .games-latest-container {
   background-image: linear-gradient(
@@ -1229,10 +1256,13 @@ footer {
   padding-top: 7px;
   font-size: 14px;
 }
-
+.tg-container div{
+  transition: .5s all;
+  cursor: pointer;
+}
 .tg-container img {
   width: 55px;
-  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.657));
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.307));
 }
 .tg-one,
 .tg-two,
@@ -1258,6 +1288,10 @@ footer {
   font-size: 14px;
   padding: 15px;
 }
+.tg-container div:hover {
+  
+  transform: scale(1.055);
+}
 .values-one {
   background: linear-gradient(
     to left bottom,
@@ -1282,7 +1316,7 @@ footer {
   );
   box-shadow: 0px 3px 10px #324e597d;
 }
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// join us */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// join us */
 .joinus-container {
   background-image: url(/assets/images/join-us.jpg);
 }
@@ -1315,7 +1349,7 @@ footer {
 }
 .about-content img{
   width: 55px;
-  filter: drop-shadow(0 1x 3px rgba(0, 0, 0, 0.557));
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.307));
 }
 .about-content h3{
   padding-top: 20px;
@@ -1338,7 +1372,7 @@ background-position: center;
 background-size: cover;
 }
 .support-heading{
- padding-top: 50px;
+ padding-top: 70px;
  color: white;
  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.597);
 }
@@ -1377,7 +1411,16 @@ color: white;
   gap: 10px;
   align-items: center;
   border-radius: 20px;
+  padding: 15px 25px;
+cursor: pointer;
+  box-shadow: 0px 3px 10px #ff000051;
+  transition: .5s all;
+  color: white;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.308) ;
 
+}
+.help-content:hover{
+  transform: scale(1.055);
 }
 
 .help-container{
@@ -1392,16 +1435,16 @@ color: white;
 }
 .help-container img {
   width: 55px;
-  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.657));
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.307));
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
  
   .help-container {
     grid-template-columns: repeat(1, 1fr);
    
   
   }
-  .help-container p{}
+  
 }
 .help-content h3{
   
@@ -1417,3 +1460,60 @@ color: white;
   padding-left: 8px;
   
 }
+.help-one{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-two{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-three{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-four{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-five{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-six{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-seven{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+.help-eight{
+  background: linear-gradient(
+    to left bottom,
+    #F2DC99 0%,
+    #F28B50 100%
+  );
+}
+
