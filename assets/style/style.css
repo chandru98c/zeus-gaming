@@ -59,7 +59,7 @@ li {
 }
 .profile-menu i {
   font-size: 25px;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 5px;
   display: none;
   /* color: var(--p--tag--); */
   color: grey;
@@ -891,7 +891,7 @@ footer {
 
   .nav-bar {
     border-radius: 2rem;
-    padding: 7px 5% 7px 2%;
+    padding: 7px 3% 7px 5%;
   }
   .social-links {
     flex-direction: column;
