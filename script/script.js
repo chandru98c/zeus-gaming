@@ -87,3 +87,47 @@ sr.reveal(".card-03", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, d
 sr.reveal(".card-04", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, delay: 480});
 sr.reveal(".card-05", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, delay: 540});
 sr.reveal(".card-06", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, delay: 600});
+
+// sr.reveal(".card-101", {origin:'bottom', distance:'50px',opacity: 0,scale: .5, delay: 300 , reset: true});
+// sr.reveal(".card-102", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, delay: 360 , reset: true});
+// sr.reveal(".card-103", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, delay: 420 , reset: true});
+// sr.reveal(".card-104", {origin:'bottom', distance:'100px',opacity: 0,scale: .5, delay: 480 , reset: true});
+sr.reveal(".card-1101", {
+  rotate: {
+    y: 90
+  },
+  opacity: 0,
+  duration: 1000
+});
+sr.reveal(".card-101", {
+  rotate: {
+    y: 90
+  },
+  opacity: 0,
+  duration: 1000,
+  reset: true, delay: 300
+});
+sr.reveal(".card-102", {
+  rotate: {
+    y: 90
+  },
+  opacity: 0,
+  duration: 1000,
+  reset: true, delay: 360
+});
+sr.reveal(".card-103", {
+  rotate: {
+    y: 90
+  },
+  opacity: 0,
+  duration: 1000,
+  reset: true, delay: 420
+});
+sr.reveal(".card-104", {
+  rotate: {
+    y: 90
+  },
+  opacity: 0,
+  duration: 1000,
+  reset: true, delay: 480
+});
